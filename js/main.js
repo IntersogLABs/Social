@@ -6,7 +6,7 @@ requirejs.config({
         bootstrap: 'vendor/bootstrap',
         handlebars: 'vendor/handlebars-v3.0.3',
         jquery: 'vendor/jquery',
-        // text: '/requirejs-text/text',
+        text: 'vendor/require-text',
         underscore: 'vendor/underscore'
     },
     shim: {
@@ -23,8 +23,16 @@ requirejs.config({
         bootstrap: {
             deps: ['jquery']
         }
-    },
+    }
 });
+
+
+
+window.config = {
+    user: "vpotravnyy",
+    pwd: "1234",
+    apiUrl: "http://api.intersoglabs.com/"
+}
 
 require(["app"], function(App){
     App()
